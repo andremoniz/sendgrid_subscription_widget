@@ -103,6 +103,9 @@ exports.sendConfirmation = (req, res, next) => {
 }
 
 // Create new contact and add contact to given list
+exports.addEmail = function(req, res, next) {
+	addUserToList(req.body[0], function()  {});
+}
 exports.addUser = function(req, res, next) {
 	addUserToList(req.body[0], function() {
 		//send notification about the new signup
